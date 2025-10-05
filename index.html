@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience fine dining at Delicious Eats. Explore our menu featuring starters, main courses, and desserts made with locally-sourced ingredients.">
+    <title>Delicious Eats | Fine Dining Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <span>D</span>
+                    <span>E</span>
+                </div>
+                <div class="logo-text">
+                    <h1>Delicious Eats</h1>
+                    <p class="tagline">Savor the finest flavors in town</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#menu" class="nav-link"><i class="fas fa-utensils"></i> Menu</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="#reservations" class="cta-button"><i class="fas fa-calendar-alt"></i> Reservations</a></li>
+                    <li class="search-container">
+                        <button 
+                            class="search-toggle" 
+                            id="searchToggle"
+                            aria-expanded="false"
+                            aria-controls="searchBox"
+                            aria-label="Search menu. Press enter to open search box.">
+                            <span class="sr-only">Search</span>
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                        <div id="searchBox" class="search-box" role="search" aria-labelledby="searchToggle">
+                            <label for="searchInput" class="sr-only">Search menu items</label>
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                placeholder="Search menu..." 
+                                aria-label="Search menu items"
+                                aria-describedby="searchHelp"
+                                autocomplete="off">
+                            <button 
+                                class="search-button" 
+                                type="submit"
+                                aria-label="Search">
+                                <span class="sr-only">Search</span>
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                            <span id="searchHelp" class="sr-only">Search by dish name or description</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Delicious Eats</h2>
+                <p>Experience culinary excellence with our seasonal menu crafted from locally-sourced ingredients</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="cta-button">View Our Menu</a>
+                    <a href="#reservations" class="cta-button secondary">Make a Reservation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special of the Day -->
+        <section id="special" class="special-of-the-day">
+            <div class="container">
+                <h2>Today's Special</h2>
+                <span class="special-dish">Grilled Salmon with Lemon Butter Sauce</span>
+                <p class="special-description">Fresh Atlantic salmon grilled to perfection, served with seasonal vegetables and our signature lemon butter sauce.</p>
+                <div class="special-price">
+                    $24.99 <span class="original-price">$29.99</span>
+                </div>
+                <p class="special-time">Available until 10 PM</p>
+            </div>
+        </section>
+
+<!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2 class="section-title">Our Menu</h2>
+                
+                <!-- Starters Section -->
+                <section id="starters" class="menu-category">
+                    <h3 class="category-title"><i class="fas fa-utensils"></i> Starters</h3>
+                    
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Bruschetta</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag vegetarian" title="Vegetarian">Veg</span>
+                                    </div>
+                                </td>
+                                <td class="description">Toasted bread topped with tomatoes, garlic, and fresh basil.</td>
+                                <td class="price">$8.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Garlic Bread</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag vegetarian" title="Vegetarian">Veg</span>
+                                        <span class="tag vegan" title="Vegan">Vegan</span>
+                                    </div>
+                                </td>
+                                <td class="description">Freshly baked bread with garlic butter and herbs.</td>
+                                <td class="price">$6.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Main Course Section -->
+                <section id="main-course" class="menu-category">
+                    <h3 class="category-title"><i class="fas fa-drumstick-bite"></i> Main Course</h3>
+                    
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Grilled Salmon</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag gluten-free" title="Gluten Free">Gluten Free</span>
+                                    </div>
+                                </td>
+                                <td class="description">Fresh salmon fillet with seasonal vegetables and lemon butter sauce.</td>
+                                <td class="price">$22.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Herb-Crusted Chicken</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag gluten-free" title="Gluten Free">Gluten Free</span>
+                                    </div>
+                                </td>
+                                <td class="description">Juicy chicken breast with herbed crust, served with roasted potatoes and seasonal greens.</td>
+                                <td class="price">$19.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Grilled Vegetable Platter</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag vegetarian" title="Vegetarian">Veg</span>
+                                        <span class="tag vegan" title="Vegan">Vegan</span>
+                                        <span class="tag gluten-free" title="Gluten Free">Gluten Free</span>
+                                    </div>
+                                </td>
+                                <td class="description">Seasonal grilled vegetables with quinoa pilaf and balsamic glaze.</td>
+                                <td class="price">$17.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Seafood Paella</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag gluten-free" title="Gluten Free">Gluten Free</span>
+                                    </div>
+                                </td>
+                                <td class="description">Spanish-style rice with shrimp, mussels, clams, and chorizo, flavored with saffron.</td>
+                                <td class="price">$24.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Mushroom Risotto</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag vegetarian" title="Vegetarian">Veg</span>
+                                    </div>
+                                </td>
+                                <td class="description">Creamy arborio rice with wild mushrooms and parmesan.</td>
+                                <td class="price">$18.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Desserts Section -->
+                <section id="desserts" class="menu-category">
+                    <h3 class="category-title"><i class="fas fa-ice-cream"></i> Desserts</h3>
+                    
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Chocolate Lava Cake</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag vegetarian" title="Vegetarian">Veg</span>
+                                    </div>
+                                </td>
+                                <td class="description">Warm chocolate cake with a molten center, served with vanilla ice cream.</td>
+                                <td class="price">$8.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Tiramisu</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag vegetarian" title="Vegetarian">Veg</span>
+                                    </div>
+                                </td>
+                                <td class="description">Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone.</td>
+                                <td class="price">$7.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Beverages Section -->
+                <section id="beverages" class="menu-category">
+                    <h3 class="category-title"><i class="fas fa-glass-whiskey"></i> Beverages</h3>
+                    
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Fresh Orange Juice</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag vegan" title="Vegan">Vegan</span>
+                                        <span class="tag gluten-free" title="Gluten Free">Gluten Free</span>
+                                    </div>
+                                </td>
+                                <td class="description">Freshly squeezed orange juice, served chilled.</td>
+                                <td class="price">$4.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                            <tr class="menu-item">
+                                <td class="item-name">
+                                    <h4>Iced Tea</h4>
+                                    <div class="dietary-tags">
+                                        <span class="tag vegan" title="Vegan">Vegan</span>
+                                        <span class="tag gluten-free" title="Gluten Free">Gluten Free</span>
+                                    </div>
+                                </td>
+                                <td class="description">House brewed iced tea with lemon.</td>
+                                <td class="price">$3.99</td>
+                                <td class="actions">
+                                    <button class="btn-add-to-order">Add to Order</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>Founded in 2010, Delicious Eats has been serving authentic, locally-sourced cuisine in a warm and inviting atmosphere. Our chefs bring years of experience and a passion for creating memorable dining experiences.</p>
+                        <p>We believe in using only the freshest ingredients, sourced from local farmers and producers whenever possible.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Restaurant interior" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Visit Us</h3>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Restaurant Street, Foodie City</p>
+                            <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                            <p><i class="fas fa-envelope"></i> info@deliciouseats.com</p>
+                        </address>
+                        <div class="hours">
+                            <h4>Opening Hours</h4>
+                            <ul>
+                                <li>Monday - Thursday: 11:00 AM - 10:00 PM</li>
+                                <li>Friday - Saturday: 11:00 AM - 11:00 PM</li>
+                                <li>Sunday: 12:00 PM - 9:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservations" class="reservation-section">
+            <div class="container">
+                <h2 class="section-title">Make a Reservation</h2>
+                <p class="section-subtitle">Book your table online and enjoy a special dining experience</p>
+                
+                <form id="reservationForm" class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservation-name">Full Name *</label>
+                            <input type="text" id="reservation-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservation-email">Email *</label>
+                            <input type="email" id="reservation-email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservation-phone">Phone Number *</label>
+                            <input type="tel" id="reservation-phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservation-guests">Number of Guests *</label>
+                            <select id="reservation-guests" name="guests" required>
+                                <option value="" disabled selected>Select guests</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                <option value="7">7+ People</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservation-date">Date *</label>
+                            <input type="date" id="reservation-date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservation-time">Time *</label>
+                            <input type="time" id="reservation-time" name="time" min="11:00" max="22:00" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reservation-notes">Special Requests (Optional)</label>
+                        <textarea id="reservation-notes" name="notes" rows="3" placeholder="Any special requirements or requests?"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="cta-button">Book Table</button>
+                    </div>
+                    
+                    <div id="reservation-message" class="reservation-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Delicious Eats</h3>
+                    <p>Experience the finest dining with our seasonal menu crafted from locally-sourced ingredients.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Delicious Eats. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/reservation.js"></script>
+</body>
+</html>
